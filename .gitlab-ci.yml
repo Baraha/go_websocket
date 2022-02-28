@@ -1,0 +1,12 @@
+stages:
+  - run 
+
+run-job:
+  only:
+    - main
+
+  stage: run
+  script:
+    - echo "run the code..."
+    - docker-compose -f dev.yml up -d --build websocket
+    - echo "Compile complete."

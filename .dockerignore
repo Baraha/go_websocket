@@ -1,0 +1,11 @@
+scripts/
+.git/
+
+.gitignore
+.env
+*.test
+*.out
+*.json
+*.md
+*.toml
+

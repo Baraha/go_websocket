@@ -1,0 +1,16 @@
+version: '3'
+
+networks:
+  default:
+    external:
+      name: gitlab_default
+
+services:
+    websocket:
+        container_name: websocket
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        ports:
+            - "9876:9876"
+        restart: always
